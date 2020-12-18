@@ -1,5 +1,4 @@
-const getJSFileTemplate = () => `
-const fs = require("fs");
+const getJSFileTemplate = () => `const fs = require("fs");
 const os = require("os");
 
 const parseInput = (inputFileName) => {
@@ -18,14 +17,16 @@ const run = (inputFileName) => {
 module.exports = { run };
 `;
 
-const getTestFileTemplate = (taskNumber, subTaskNumber) => `
-const { run } = require("./${subTaskNumber}");
+const getTestFileTemplate = (
+  taskNumber,
+  subTaskNumber
+) => `const { run } = require("./${subTaskNumber}");
 
-describe("${taskNumber}-${subTaskNumber}", () => {
-  it("test result", () => {
+describe.skip("${taskNumber}-${subTaskNumber}", () => {
+  test("test result", () => {
     expect(run("/testInput")).toEqual(null);
   });
-  it("solution result", () => {
+  test("solution result", () => {
     expect(run("/input")).toEqual(null);
   });
 });
