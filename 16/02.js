@@ -87,6 +87,4 @@ const run = (inputFileName) => {
   return process(input);
 };
 
-run("/testInput02.json");
-
 module.exports = { run };
