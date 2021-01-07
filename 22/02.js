@@ -71,6 +71,4 @@ const run = (inputFileName) => {
   return process(input);
 };
 
-run("testInput02");
-
 module.exports = { run };

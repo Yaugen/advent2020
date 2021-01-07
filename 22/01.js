@@ -35,6 +35,4 @@ const run = (inputFileName) => {
   return process(input);
 };
 
-run("testInput");
-
 module.exports = { run };
